@@ -1,11 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fledgling Talent</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block content %}
+
     {% for job in jobs %}
         {{ job.job_sector }}<br>
         {{ job.job_title }}<br>
@@ -23,5 +18,5 @@
         {{ job.date_posted }}<br>
         {{ job.is_featured }}<br>
     {% endfor %}
-</body>
-</html>
+
+{% endblock %}

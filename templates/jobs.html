@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fledgling Talent</title>
+</head>
+<body>
+    {% for job in jobs %}
+        {{ job.job_sector }}<br>
+        {{ job.job_title }}<br>
+        {{ job.company_name }}<br>
+        {{ job.role_type }}<br>
+        {{ job.job_location }}<br>
+        {{ job.job_salary }}<br>
+        {{ job.job_start_date }}<br>
+        {{ job.job_overview }}<br>
+        {{ job.job_description }}<br>
+        {{ job.job_responsibilities }}<br>
+        {{ job.job_requirements }}<br>
+        {{ job.job_benefits }}<br>
+        {{ job.job_skills }}<br>
+        {{ job.date_posted }}<br>
+        {{ job.is_featured }}<br>
+    {% endfor %}
+</body>
+</html>

@@ -4,7 +4,6 @@
 body {
     padding: 0;
     margin: 0;
-    overflow: hidden;
 }
 /*--------------------------------------------Navbar*/
 .navbar {
@@ -68,4 +67,38 @@ body {
     font-size: 2rem;
     text-align: center;
     padding-top: 1rem;
+}
+/*--------------------------------------------Featured Jobs*/
+.featured-jobs-card {
+    background-color: #DDD;
+    margin: auto;
+    padding: 0;
+}
+.featured-job-title {
+    font-size: 1.6rem;
+    text-align: center;
+    text-decoration: underline;
+}
+.featured-job-location {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+}
+.featured-job-salary {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+}
+.featured-job-overview {
+    font-size: 1.2rem;
+    padding: 2rem;
+}
+.featured-star-right {
+    float: right;
+    padding: 1rem;
+    font-size: 2rem;
+    color: #CF2A27;
+}
+.featured-star-left {
+    padding: 1rem;
+    font-size: 2rem;
+    color: #CF2A27;
 }

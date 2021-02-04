@@ -33,36 +33,39 @@
                             <h4>Home</h4>
                         </a>
                     </li>
+                    {% if session.user %}
                     <li class="nav-item">
                         <a href="#" class="nav-link">
                             <h4>Find Jobs</h4>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <h4>Post Jobs</h4>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url_for('profile', username=session['user']) }}" class="nav-link">
-                            <h4>Profile</h4>
-                        </a>
-                    </li>                    
-                    <li class="nav-item">
-                        <a href="{{ url_for('sign_in') }}" class="nav-link">
-                            <h4>Sign In</h4>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <h4>Sign Out</h4>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="{{ url_for('register') }}" class="nav-link">
-                            <h4>Register</h4>
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">
+                                <h4>Post Jobs</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('profile', username=session['user']) }}" class="nav-link">
+                                <h4>Profile</h4>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('sign_out') }}" class="nav-link">
+                                <h4>Sign Out</h4>
+                            </a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a href="{{ url_for('sign_in') }}" class="nav-link">
+                                <h4>Sign In</h4>
+                            </a>
+                        </li>                    
+                        <li class="nav-item">
+                            <a href="{{ url_for('register') }}" class="nav-link">
+                                <h4>Register</h4>
+                            </a>
+                        </li>
+                    {% endif %}
                 </ul>
             </div>
         </nav>

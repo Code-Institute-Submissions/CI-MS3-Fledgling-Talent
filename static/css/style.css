@@ -56,6 +56,12 @@ body {
 .row {
     margin: 0;
 }
+.user-links {
+    font-size: 1.6rem;
+}
+.user-links-section {
+    margin: auto;
+}
 /*--------------------------------------------Buttons*/
 #register-button {
     font-size: 2rem;
@@ -63,7 +69,7 @@ body {
     padding-right: 2rem;
     background-color: #CF2A27;
     color: #FFF;
-    margin: 4rem auto;
+    margin: 2rem auto 1rem;
     display: block;
     border: 0.2rem solid #000;
 }
@@ -117,7 +123,7 @@ body {
 /*--------------------------------------------Register Page*/
 .register-section-card {
     width: 80%;
-    margin: 3rem auto;
+    margin: 2rem auto 1rem;
 }
 .form-group label {
     font-size: 2rem;

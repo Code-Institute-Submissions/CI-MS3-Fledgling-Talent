@@ -13,13 +13,13 @@ body {
     justify-content: space-between !important;
 }
 .navbar h1 {
-    color: #fff;
+    color: #FFF;
     padding: 1rem;
     padding-left: .5rem;
     font-size: 3rem;   
 }
 .navbar h4 {
-    color: #fff;
+    color: #FFF;
     padding: 1.2rem;
     font-size: 2rem;
 }
@@ -31,7 +31,7 @@ body {
 .nav-item:focus,
 .nav-item:active:focus {
     text-decoration: underline;
-    color: #fff;
+    color: #FFF;
 }
 .navbar-brand {
     margin-right: 0;
@@ -59,12 +59,13 @@ body {
 /*--------------------------------------------Buttons*/
 #register-button {
     font-size: 2rem;
-    padding: 0.5rem;
+    padding: 0.2rem;
     padding-right: 2rem;
     background-color: #CF2A27;
     color: #FFF;
     margin: 4rem auto;
     display: block;
+    border: 0.2rem solid #000;
 }
 /*--------------------------------------------Images*/
 #hero-image {
@@ -131,6 +132,6 @@ body {
 }
 .form-group {
     background-color: #DDD;
-    border: 2px solid #DDD;
+    border: 0.2rem solid #DDD;
     margin: 0;
 }

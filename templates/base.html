@@ -16,7 +16,7 @@
 </head>
 <body>
 <div class="container-fluid pl-0 pr-0">
-
+<!-- ================================================ NAVBAR ================================================--> 
     <header>
          <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="{{ url_for('home') }}"><img src="static/images/logo.png" class="logo" alt="Logo"></a>
@@ -62,11 +62,23 @@
             </div>
         </nav>
     </header>
+<!-- ================================================ FLASH MESSAGES================================================--> 
+    <section class="flash-message-section">
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="row flashes">
+                        <h4>{{ message }}</h4>
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    </section>
 
     {% block content %}
     {% endblock %}
 </div>
-<!-- ================================================SCRIPTS================================================--> 
+<!-- ================================================ SCRIPTS ================================================--> 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
     </script>

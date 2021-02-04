@@ -1,6 +1,6 @@
 {% extends "base.html" %}
     {% block content %}
-
+<!-- ================================================ REGISTER ================================================--> 
     <section class="register-section">
         <h3 class="headings">Register</h3>
         <hr class="block-divider block-divider-short">
@@ -11,17 +11,27 @@
                     <div class="form-group">
                         <i class="fas fa-user-plus form-icon"></i>
                         <label for="username">Username</label>
-                        <input type="text" class="form-control" id="username" name="username" placeholder="Please Enter a Username">
+                        <input type="text" class="form-control" id="username" name="username" minlength="5" 
+                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Please Enter a Username" required>
+                        <small class="form-text text-muted help-block">
+                            Your username must be 5-15 characters long and must not contain spaces or special characters.
+                        </small>
                     </div>
                     <!--Password Field-->
                     <div class="form-group">
                         <i class="fas fa-user-lock form-icon"></i>
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" id="password" name="password" placeholder="Please Enter a Password">
+                        <input type="password" class="form-control" id="password" name="password" minlength="5" 
+                        maxlength="15" pattern="^[a-zA-Z0-9]{5,15}$" placeholder="Please Enter a Password" required>
+                        <small class="form-text text-muted help-block">
+                            Your password must be 5-15 characters long and must not contain spaces or special characters.
+                        </small>                        
                     </div>
                     <!--Register Button-->
                     <div>
-                        <button type="submit" class="btn-large" id="register-button"><i class="fas fa-sign-in-alt form-icon"></i>Register</button>
+                        <button type="submit" class="btn-large" id="register-button">
+                            <i class="fas fa-sign-in-alt form-icon"></i>Register
+                        </button>
                     </div>
                 </form>
             </div>

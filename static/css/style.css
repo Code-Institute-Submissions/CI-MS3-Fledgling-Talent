@@ -135,3 +135,16 @@ body {
     border: 0.2rem solid #DDD;
     margin: 0;
 }
+.help-block {
+    font-size: 1.2rem;
+    padding: 1rem;
+}
+/*--------------------------------------------Flash Messages*/
+.flashes h4 {
+    line-height: 2;
+    text-align: center;
+    margin: 4rem auto;
+    background-color: #DDD;
+    font-size: 2rem;
+    width: 100%;
+}

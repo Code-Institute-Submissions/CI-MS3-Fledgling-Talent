@@ -86,6 +86,16 @@ body {
     text-align: center;
     padding-top: 1rem;
 }
+.job-headings {
+    font-size: 1.6rem;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    text-decoration: underline;
+}
+.job-sub-headings {
+    font-size: 1.4rem;
+    padding-left: 2rem;
+}
 /*--------------------------------------------Featured Jobs*/
 .featured-job-card {
     background-color: #DDD;
@@ -119,6 +129,16 @@ body {
     padding: 1rem;
     font-size: 2rem;
     color: #CF2A27;
+}
+/*--------------------------------------------Jobs*/
+.job-card {
+    width: 90%;
+    margin: 2rem auto 1rem;
+    background-color: #DDD;
+}
+.job-description {
+    font-size: 1.2rem;
+    padding: 2rem;
 }
 /*--------------------------------------------Forms*/
 .form-section-card {

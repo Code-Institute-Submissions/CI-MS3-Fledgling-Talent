@@ -6,38 +6,8 @@
     </section>
 <!-- ================================================ FEATURED JOBS ================================================--> 
     <section class="featured-job-section">
-        <h3 class="headings">Featured Jobs</h3>
+        <h3 class="headings">Latest Jobs</h3>
         <hr class="block-divider block-divider-short">
-    {% for job in jobs %}
-        <div class="row">
-            <div class="col-md-3 featured-job-card">
-                <i class="fas fa-star featured-star-left"></i>
-                <i class="fas fa-star featured-star-right"></i>
-                <div class="featured-job-title">
-                    {{ job.job_title }}
-                </div>
-                <div class="featured-job-location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    {{ job.job_location }}
-                </div>
-                <div class="featured-job-salary">
-                    <i class="fas fa-pound-sign"></i>
-                    {{ job.job_salary }}
-                </div>
-                <div class="featured-job-overview">
-                    {{ job.job_overview }}
-                </div>                             
-            </div>
-
-            <div class="col-md-3 featured-jobs-card">
-                TEST
-            </div>
-
-            <div class="col-md-3 featured-jobs-card">
-                TEST
-            </div>
-        </div>
-    {% endfor %}
     </section>
 
     {% endblock %}

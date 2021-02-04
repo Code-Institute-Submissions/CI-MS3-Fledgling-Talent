@@ -6,24 +6,28 @@
         <hr class="block-divider block-divider-short">
         <div class="row">
             {% for job in jobs %}
-            <div class="col-s8 job-card">
-                <h3 class="job-headings">{{ job.job_title }}</h3>
-                <div class="job-sub-headings">
-                    <i class="fas fa-briefcase"></i>
-                    {{ job.company_name }}
+                <div class="col-s8 job-card">
+                    <h3 class="job-headings">{{ job.job_title }}</h3>
+                    <div class="job-sub-headings">
+                        <i class="fas fa-briefcase"></i>
+                        {{ job.company_name }}
+                    </div>
+                    <div class="job-sub-headings">
+                        <i class="fas fa-map-marker-alt"></i>
+                        {{ job.job_location }}
+                    </div>
+                    <div class="job-sub-headings">
+                        <i class="fas fa-pound-sign"></i>
+                        {{ job.job_salary }}
+                    </div>
+                    <div class="job-sub-headings">
+                        <i class="fas fa-file-signature"></i>
+                        {{ job.role_type }}
+                    </div>
+                    <div class="job-description">
+                        {{ job.job_overview }}
+                    </div>                                
                 </div>
-                <div class="job-sub-headings">
-                    <i class="fas fa-map-marker-alt"></i>
-                    {{ job.job_location }}
-                </div>
-                <div class="job-sub-headings">
-                    <i class="fas fa-pound-sign"></i>
-                    {{ job.job_salary }}
-                </div> 
-                <div class="job-description">
-                    {{ job.job_overview }}
-                </div>                                
-            </div>
             {% endfor %}
         </div>
     </section>

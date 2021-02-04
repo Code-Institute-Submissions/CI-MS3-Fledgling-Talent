@@ -46,9 +46,11 @@ def register():
         # Put new user into 'session' cookie
         session["user"] = request.form.get("username").lower()
         flash("Registration Successful!")
+        return redirect(url_for("profile", username=session["user"]))
     return render_template("register.html")
 
 
+# Sign In Page
 @app.route("/sign_in", methods=["GET", "POST"])
 def sign_in():
     if request.method == "POST":
@@ -59,9 +61,13 @@ def sign_in():
         if existing_user:
             # Ensure hashed password matches user input
             if check_password_hash(
-                existing_user["password"], request.form.get("password")):
-                    session["user"] = request.form.get("username").lower()
-                    flash("Welcome, {}".format(request.form.get("username")))
+                    existing_user["password"], request.form.get("password")):
+                        session["user"] = request.form.get("username").lower()
+                        flash("Welcome, {}".format(
+                            request.form.get("username")))
+                        return redirect(url_for(
+                            "profile", username=session["user"]))
+
             else:
                 # Invalid password match
                 flash("Incorrect Username and/or Password")
@@ -74,7 +80,16 @@ def sign_in():
     return render_template("sign_in.html")
 
 
-# Find Jobs Page
+# Profile Page
+@app.route("/profile/<username>", methods=["GET", "POST"])
+def profile(username):
+    # Get the session user's username from the DB
+    username = mongo.db.users.find_one(
+        {"username": session["user"]})["username"]
+    return render_template("profile.html", username=username)
+
+
+# Jobs Page
 @app.route("/get_jobs")
 def get_jobs():
     jobs = mongo.db.jobs.find()

@@ -44,6 +44,11 @@
                         </a>
                     </li>
                     <li class="nav-item">
+                        <a href="{{ url_for('profile', username=session['user']) }}" class="nav-link">
+                            <h4>Profile</h4>
+                        </a>
+                    </li>                    
+                    <li class="nav-item">
                         <a href="{{ url_for('sign_in') }}" class="nav-link">
                             <h4>Sign In</h4>
                         </a>

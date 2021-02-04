@@ -57,7 +57,15 @@ body {
     margin: 0;
 }
 /*--------------------------------------------Buttons*/
-
+#register-button {
+    font-size: 2rem;
+    padding: 0.5rem;
+    padding-right: 2rem;
+    background-color: #CF2A27;
+    color: #FFF;
+    margin: 4rem auto;
+    display: block;
+}
 /*--------------------------------------------Images*/
 #hero-image {
     background: url("../images/hero-image.jpg") no-repeat center center;
@@ -104,4 +112,25 @@ body {
     padding: 1rem;
     font-size: 2rem;
     color: #CF2A27;
+}
+/*--------------------------------------------Register Page*/
+.register-section-card {
+    width: 80%;
+    margin: 3rem auto;
+}
+.form-group label {
+    font-size: 2rem;
+    margin: 1rem;
+}
+.form-group input {
+    font-size: 1.6rem;
+}
+.form-icon {
+    padding: 1rem;
+    font-size: 2rem;
+}
+.form-group {
+    background-color: #DDD;
+    border: 2px solid #DDD;
+    margin: 0;
 }

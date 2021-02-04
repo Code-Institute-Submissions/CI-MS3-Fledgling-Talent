@@ -53,6 +53,9 @@ body {
     margin-top: 0;
     margin-bottom: 2rem;
 }
+.row {
+    margin: 0;
+}
 /*--------------------------------------------Buttons*/
 
 /*--------------------------------------------Images*/
@@ -69,7 +72,7 @@ body {
     padding-top: 1rem;
 }
 /*--------------------------------------------Featured Jobs*/
-.featured-jobs-card {
+.featured-job-card {
     background-color: #DDD;
     margin: auto;
     padding: 0;

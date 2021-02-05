@@ -104,7 +104,7 @@ def sign_out():
 # Jobs Page
 @app.route("/get_jobs")
 def get_jobs():
-    jobs = list(mongo.db.jobs.find())
+    jobs = list(mongo.db.jobs.find().sort("_id", -1))
     return render_template("jobs.html", jobs=jobs)
 
 

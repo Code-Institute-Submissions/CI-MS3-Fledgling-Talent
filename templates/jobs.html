@@ -6,14 +6,15 @@
         <hr class="block-divider block-divider-short">
         <div class="row">
             {% for job in jobs %}
-                <div class="col-md-5 job-card">
+                <div class="col-md-10 job-card">
                     <h3 class="job-headings">{{ job.job_title }}</h3>
                     <div class="job-sub-headings">
                         <i class="fas fa-briefcase"></i>
                         {{ job.company_name }}
                     </div>
                     <div>
-                        <button class="more-info-button">
+                        <button class="more-info-button" data-toggle="collapse" data-target="#job-description-collapse{{job._id}}"
+                            aria-expanded="false" aria-controls="job-description-collapse">
                             <i class="fas fa-info-circle info-icon"></i>
                             More Information
                         </button>
@@ -37,7 +38,13 @@
                     <hr class="horizontal-rule">
                     <div class="job-overview">
                         {{ job.job_overview }}
-                    </div>                    
+                    </div>
+                    <hr class="horizontal-rule">
+                        <div class="collapse" id="job-description-collapse{{job._id}}">
+                            <div class="job-description">
+                                {{ job.job_description }}
+                            </div>
+                        </div>
                 </div>
             {% endfor %}
         </div>

@@ -4,6 +4,7 @@
 body {
     padding: 0;
     margin: 0;
+    overflow: scroll;
 }
 /*--------------------------------------------Navbar*/
 .navbar {
@@ -156,6 +157,10 @@ body {
 .info-icon {
     padding: 0.4rem;
     font-size: 1.5rem;
+}
+.job-description {
+    font-size: 1.4rem;
+    padding: 2rem 0.5rem;
 }
 /*--------------------------------------------Forms*/
 .form-section-card {

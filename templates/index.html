@@ -4,11 +4,11 @@
     <section class="hero-image-section">
         <div id="hero-image"></div>
     </section>
-<!-- ================================================ FEATURED JOBS ================================================--> 
-    <section class="featured-job-section">
+<!-- ================================================ LATEST JOBS ================================================--> 
+    <section class="latest-job-section">
         <h3 class="headings">Latest Jobs</h3>
         <hr class="block-divider block-divider-short">
-                <div class="row">
+        <div class="row">
             {% for job in jobs %}
                 <div class="col-md-10 job-card">
                     <h3 class="job-headings">{{ job.job_title }}</h3>
@@ -53,5 +53,5 @@
             {% endfor %}
         </div>
     </section>
-
+    
     {% endblock %}

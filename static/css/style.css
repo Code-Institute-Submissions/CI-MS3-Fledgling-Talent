@@ -62,6 +62,9 @@ body {
 .user-links-section {
     margin: auto;
 }
+.horizontal-rule {
+    border-color: #000;
+}
 /*--------------------------------------------Buttons*/
 #register-button {
     font-size: 2rem;
@@ -72,6 +75,16 @@ body {
     margin: 2rem auto 1rem;
     display: block;
     border: 0.2rem solid #000;
+}
+.more-info-button {
+    float: right;
+    font-size: 1.4rem;
+    padding: 0.5rem;
+    background-color: #CF2A27;
+    color: #FFF;
+    display: block;
+    border: 0.2rem solid #000;
+    margin-right: 2rem;
 }
 /*--------------------------------------------Images*/
 #hero-image {
@@ -132,13 +145,17 @@ body {
 }
 /*--------------------------------------------Jobs*/
 .job-card {
-    width: 90%;
+    width: 100%;
     margin: 2rem auto 1rem;
     background-color: #DDD;
 }
-.job-description {
-    font-size: 1.2rem;
+.job-overview {
+    font-size: 1.4rem;
     padding: 2rem;
+}
+.info-icon {
+    padding: 0.4rem;
+    font-size: 1.5rem;
 }
 /*--------------------------------------------Forms*/
 .form-section-card {

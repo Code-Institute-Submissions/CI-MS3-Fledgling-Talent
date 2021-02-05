@@ -108,6 +108,13 @@ def get_jobs():
     return render_template("jobs.html", jobs=jobs)
 
 
+# Add Job Page
+@app.route("/add_job")
+def add_job():
+
+    return render_template("add_job.html")
+
+
 if __name__ == "__main__":
     app.run(host=os.environ.get("IP"),
             port=int(os.environ.get("PORT")),

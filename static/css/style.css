@@ -4,7 +4,7 @@
 body {
     padding: 0;
     margin: 0;
-    overflow: scroll;
+    overflow-y: scroll;
 }
 /*--------------------------------------------Navbar*/
 .navbar {
@@ -110,6 +110,14 @@ body {
     font-size: 1.4rem;
     padding-left: 2rem;
 }
+.footer-heading {
+    padding: 0.5rem;
+    text-align: center;
+    color: #FFF;
+    font-size: 1.6rem;
+    text-decoration: underline;
+    margin: 0;
+}
 /*--------------------------------------------Jobs*/
 .job-card {
     width: 100%;
@@ -165,7 +173,32 @@ body {
 /*--------------------------------------------Footer*/
 footer {
     background-color: #CF2A27;
-    min-height: 8rem;
+    min-height: 5rem;
     width: 100%;
     margin-top: 2rem;
+}
+.footer-col {
+    padding: 0;
+}
+#app-store-icons {
+    margin: auto;
+    display: block;
+    padding: 0.5rem;
+}
+.social-icons-container {
+    text-align: center;
+}
+.social-icon {
+    color: #FFF;
+    font-size: 3rem;
+    padding: 1rem 0.5rem;
+    text-decoration: none;
+}
+.copyright {
+    font-size: 1.4rem;
+    color: #FFF;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

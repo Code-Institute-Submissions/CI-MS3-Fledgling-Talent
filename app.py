@@ -21,7 +21,7 @@ mongo = PyMongo(app)
 @app.route("/")
 @app.route("/home")
 def home():
-    jobs = mongo.db.jobs.find()
+    jobs = list(mongo.db.jobs.find().sort("_id", -1).limit(2))
     return render_template("index.html", jobs=jobs)
 
 

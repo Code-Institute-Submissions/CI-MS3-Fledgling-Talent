@@ -109,7 +109,7 @@ def get_jobs():
 
 
 # Add Job Page
-@app.route("/add_job")
+@app.route("/add_job", methods=["GET", "POST"])
 def add_job():
 
     return render_template("add_job.html")

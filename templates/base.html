@@ -28,11 +28,6 @@
                     </button>
             <div class="collapse navbar-collapse flex-grow-1 text-right" id="Navbar">
                 <ul class="navbar-nav ml-auto flex-nowrap">
-                    <li class="nav-item">
-                        <a href="{{ url_for('home') }}" class="nav-link">
-                            <h4>Home</h4>
-                        </a>
-                    </li>
                     {% if session.user %}
                     <li class="nav-item">
                         <a href="{{ url_for('get_jobs') }}" class="nav-link">

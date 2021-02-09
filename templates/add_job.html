@@ -7,31 +7,31 @@
 
         <div class="row">
             <div class="col-s8 form-section-card">
-                <form>
+                <form method="POST" action="">
                     <!--Job Sector Field-->
                     <div class="form-group">
-                        <label for="job-sector">Job Sector</label>
-                        <select class="form-control" id="job-sector" name="job-sector" required>
+                        <label for="job_sector">Job Sector</label>
+                        <select class="form-control" id="job_sector" name="job_sector" required>
                             <option disabled selected>Please Select an Option</option>
                             <option>Tech</option>
                         </select>
                     </div>
                     <!--Job Title Field-->
                     <div class="form-group">
-                        <label for="job-title">Job Title</label>
-                        <input type="text" class="form-control" id="job-title" name="job-title" minlength="3" 
+                        <label for="job_title">Job Title</label>
+                        <input type="text" class="form-control" id="job_title" name="job_title" minlength="3" 
                         maxlength="20" pattern="^[a-zA-Z0-9]{3,20}$" placeholder="Please Enter a Job Title" required>
                     </div>
                     <!--Company Name Field-->
                     <div class="form-group">
-                        <label for="company-name">Company Name</label>
-                        <input type="text" class="form-control" id="company-name" name="company-name" minlength="3" 
+                        <label for="company_name">Company Name</label>
+                        <input type="text" class="form-control" id="company_name" name="company_name" minlength="3" 
                         maxlength="20" pattern="^[a-zA-Z0-9]{3,20}$" placeholder="Please Enter a Company Name" required>
                     </div>
                     <!--Role Type Field-->
                     <div class="form-group">
-                        <label for="job-sector">Role Type</label>
-                        <select class="form-control" id="role-type" name="role-type" required>
+                        <label for="role_type">Role Type</label>
+                        <select class="form-control" id="role_type" name="role_type" required>
                             <option disabled selected>Please Select an Option</option>
                             <option>Temporary</option>
                             <option>Permanent</option>
@@ -40,32 +40,32 @@
                     </div>
                     <!--Job Location Field-->
                     <div class="form-group">
-                        <label for="job-title">Job Location</label>
-                        <input type="text" class="form-control" id="job-location" name="job-location" minlength="3" 
+                        <label for="job_location">Job Location</label>
+                        <input type="text" class="form-control" id="job_location" name="job_location" minlength="3" 
                         maxlength="20" pattern="^[a-zA-Z0-9]{3,20}$" placeholder="Please Enter a Job Location" required>
                     </div>
                     <!--Job Salary Field-->
                     <div class="form-group">
-                        <label for="job-title">Job Salary</label>
-                        <input type="number" class="form-control" id="job-salary" name="job-salary" min="1" step="1"
+                        <label for="job_salary">Job Salary</label>
+                        <input type="number" class="form-control" id="job_salary" name="job_salary" min="1" step="1"
                         placeholder="Please Enter a Job Salary" required>
                     </div>
                     <!--Job Start Date Field-->
                     <div class="form-group">
-                        <label for="job-start-date">Start Date</label>
-                        <input type="date" class="form-control" id="job-start-date" name="job-start-date" minlength="3" 
+                        <label for="job_start_date">Start Date</label>
+                        <input type="date" class="form-control" id="job_start_date" name="job_start_date" minlength="3" 
                         maxlength="20" placeholder="Please Enter a Start Date" required>
                     </div>
                     <!--Job Overview Field-->
                     <div class="form-group">
-                        <label for="job-overview">Job Overview</label>
-                        <textarea class="form-control" id="job-overview" name="job-overview" minlength="10" 
+                        <label for="job_overview">Job Overview</label>
+                        <textarea class="form-control" id="job_overview" name="job_overview" minlength="10" 
                         maxlength="100" pattern="^[a-zA-Z0-9]{10,100}$" rows="3" placeholder="Please Enter A Brief Overview" required></textarea>
                     </div>
                     <!--Job Description Field-->
                     <div class="form-group">
-                        <label for="job-description">Job Description</label>
-                        <textarea class="form-control" id="job-description" name="job-description" minlength="10"
+                        <label for="job_description">Job Description</label>
+                        <textarea class="form-control" id="job_description" name="job_description" minlength="10"
                         maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="10" placeholder="Please Enter a Job Description" required></textarea>
                     </div>
                     <!--Submit Button-->

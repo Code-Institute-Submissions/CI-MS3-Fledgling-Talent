@@ -111,8 +111,25 @@ def get_jobs():
 # Add Job Page
 @app.route("/add_job", methods=["GET", "POST"])
 def add_job():
+    if request.method == "POST":
+        job = {
+            "job_sector": request.form.getlist("job_sector"),
+            "job_title": request.form.get("job_title"),
+            "company_name": request.form.get("company_name"),
+            "role_type": request.form.get("role_type"),
+            "job_location": request.form.get("job_location"),
+            "job_salary": request.form.get("job_salary"),
+            "job_start_date": request.form.get("job_start_date"),
+            "job_overview": request.form.get("job_overview"),
+            "job_description": request.form.get("job_description"),
+            "posted_by": session["user"]
+        }
+        mongo.db.jobs.insert_one(job)
+        flash("Job Successfully Posted")
+        return redirect(url_for("get_jobs"))
 
-    return render_template("add_job.html")
+    jobs = list(mongo.db.jobs.find().sort("_id", -1))
+    return render_template("add_job.html", jobs=jobs)
 
 
 if __name__ == "__main__":

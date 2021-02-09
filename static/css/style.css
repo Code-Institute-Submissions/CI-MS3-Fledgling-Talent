@@ -144,6 +144,9 @@ body {
     font-size: 1.4rem;
     padding-left: 1rem;
 }
+.posted-by {
+    font-size: 1.4rem;
+}
 /*--------------------------------------------Forms*/
 .form-section-card {
     width: 80%;

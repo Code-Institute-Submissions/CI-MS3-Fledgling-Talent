@@ -35,6 +35,10 @@
                         <i class="fas fa-calendar-alt"></i>
                         {{ job.job_start_date }}
                     </div>
+                    <div class="job-sub-headings">
+                        <i class="fas fa-thumbtack"></i>
+                        {{ job.date_posted }}
+                    </div>                    
                     <hr class="horizontal-rule">
                     <div class="job-overview">
                         {{ job.job_overview }}
@@ -42,8 +46,27 @@
                     <hr class="horizontal-rule">
                         <div class="collapse" id="job-description-collapse{{job._id}}">
                             <div class="job-description">
+                                <h5 class="job-extra-heading">Job Description</h5>
                                 {{ job.job_description }}
                             </div>
+                            <h5 class="job-extra-heading">Responsibilities</h5>
+                            <ul class="job-content">
+                                {% for responsibility in job.job_responsibilities %}
+                                    <li>{{ responsibility }}</li>
+                               {% endfor %}
+                            </ul>
+                            <h5 class="job-extra-heading">Requirements</h5>
+                            <ul class="job-content">
+                                {% for requirement in job.job_requirements %}
+                                    <li>{{ requirement }}</li>
+                               {% endfor %}
+                            </ul>
+                            <h5 class="job-extra-heading">Benefits</h5>
+                            <ul class="job-content">
+                                {% for benefit in job.job_benefits %}
+                                    <li>{{ benefit }}</li>
+                               {% endfor %}
+                            </ul>                                                         
                         </div>
                 </div>
             {% endfor %}

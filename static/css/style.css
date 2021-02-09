@@ -110,6 +110,10 @@ body {
     font-size: 1.4rem;
     padding-left: 2rem;
 }
+.job-extra-heading {
+    font-size: 1.4rem;
+    text-decoration: underline;
+}
 .footer-heading {
     padding: 0.5rem;
     text-align: center;
@@ -134,7 +138,11 @@ body {
 }
 .job-description {
     font-size: 1.4rem;
-    padding: 2rem;
+    padding: 2rem 0;
+}
+.job-content li {
+    font-size: 1.4rem;
+    padding-left: 1rem;
 }
 /*--------------------------------------------Forms*/
 .form-section-card {

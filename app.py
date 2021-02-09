@@ -124,6 +124,21 @@ def add_job():
             "job_description": request.form.get("job_description"),
             "posted_by": session["user"]
         }
+        job_responsibilities = {
+            "job_responsibilities": request.form.get(
+                "job_responsibilities[]").split('\n')
+        }
+        job_requirements = {
+            "job_requirements": request.form.get(
+                "job_requirements[]").split('\n')
+        }
+        job_benefits = {
+            "job_benefits": request.form.get("job_benefits[]").split('\n')
+        }
+        job.update(job_responsibilities)
+        job.update(job_requirements)
+        job.update(job_benefits)
+
         mongo.db.jobs.insert_one(job)
         flash("Job Successfully Posted")
         return redirect(url_for("get_jobs"))

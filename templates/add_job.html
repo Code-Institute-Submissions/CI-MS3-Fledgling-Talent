@@ -47,8 +47,8 @@
                     <!--Job Salary Field-->
                     <div class="form-group">
                         <label for="job_salary">Job Salary</label>
-                        <input type="number" class="form-control" id="job_salary" name="job_salary" min="1" step="1"
-                        placeholder="Please Enter a Job Salary" required>
+                        <input type="number" class="form-control" id="job_salary" name="job_salary" min="1" step="1" 
+                        pattern="^[-0-9]$" placeholder="Please Enter a Job Salary" required>
                     </div>
                     <!--Job Start Date Field-->
                     <div class="form-group">
@@ -68,6 +68,36 @@
                         <textarea class="form-control" id="job_description" name="job_description" minlength="10"
                         maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="10" placeholder="Please Enter a Job Description" required></textarea>
                     </div>
+                    <!--Job Responsibilities Field-->
+                    <div class="form-group">
+                        <label for="job_responsibilities">Job Responsibilities</label>
+                        <small class="form-text text-muted help-block">
+                            <i class="fas fa-info-circle"></i>
+                            Please enter each responsibility on a new line
+                        </small>
+                        <textarea class="form-control" id="job_responsibilities" name="job_responsibilities[]" minlength="10"
+                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Responsibilities" required></textarea>
+                    </div>
+                    <!--Job Requirements Field-->
+                    <div class="form-group">
+                        <label for="job_requirements">Job Requirements</label>
+                        <small class="form-text text-muted help-block">
+                            <i class="fas fa-info-circle"></i>
+                            Please enter each requirement on a new line
+                        </small>                        
+                        <textarea class="form-control" id="job_requirements" name="job_requirements[]" minlength="10"
+                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Requirements" required></textarea>
+                    </div>
+                    <!--Job Benfits Field-->
+                    <div class="form-group">
+                        <label for="job_benefits">Job Benefits</label>
+                        <small class="form-text text-muted help-block">
+                            <i class="fas fa-info-circle"></i>
+                            Please enter each benefit on a new line
+                        </small>                        
+                        <textarea class="form-control" id="job_benefits" name="job_benefits[]" minlength="3"
+                        maxlength="500" pattern="^[a-zA-Z0-9]{3,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Benefits" required></textarea>
+                    </div>                                                          
                     <!--Submit Button-->
                     <div>
                         <button type="submit" class="btn-large" id="action-button">

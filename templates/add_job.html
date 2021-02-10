@@ -7,7 +7,7 @@
 
         <div class="row">
             <div class="col-s8 form-section-card">
-                <form method="POST" action="">
+                <form method="POST" action="{{ url_for('add_job') }}">
                     <!--Job Sector Field-->
                     <div class="form-group">
                         <label for="job_sector">Job Sector</label>
@@ -60,13 +60,13 @@
                     <div class="form-group">
                         <label for="job_overview">Job Overview</label>
                         <textarea class="form-control" id="job_overview" name="job_overview" minlength="10" 
-                        maxlength="100" pattern="^[a-zA-Z0-9]{10,100}$" rows="3" placeholder="Please Enter A Brief Overview" required></textarea>
+                        maxlength="250" pattern="^[a-zA-Z0-9]{10,250}$" rows="3" placeholder="Please Enter A Brief Overview" required></textarea>
                     </div>
                     <!--Job Description Field-->
                     <div class="form-group">
                         <label for="job_description">Job Description</label>
                         <textarea class="form-control" id="job_description" name="job_description" minlength="10"
-                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="10" placeholder="Please Enter a Job Description" required></textarea>
+                        maxlength="750" pattern="^[a-zA-Z0-9]{10,750}$" rows="10" placeholder="Please Enter a Job Description" required></textarea>
                     </div>
                     <!--Job Responsibilities Field-->
                     <div class="form-group">
@@ -76,7 +76,7 @@
                             Please enter each responsibility on a new line
                         </small>
                         <textarea class="form-control" id="job_responsibilities" name="job_responsibilities[]" minlength="10"
-                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Responsibilities" required></textarea>
+                        maxlength="750" pattern="^[a-zA-Z0-9]{10,750}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Responsibilities" required></textarea>
                     </div>
                     <!--Job Requirements Field-->
                     <div class="form-group">

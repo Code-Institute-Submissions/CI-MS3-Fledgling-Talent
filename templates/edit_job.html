@@ -7,7 +7,7 @@
 
         <div class="row">
             <div class="col-s8 form-section-card">
-                <form method="POST" action="">
+                <form method="POST" action="{{ url_for('edit_job', job_id=job._id) }}">
                     <!--Job Sector Field-->
                     <div class="form-group">
                         <label for="job_sector">Job Sector</label>

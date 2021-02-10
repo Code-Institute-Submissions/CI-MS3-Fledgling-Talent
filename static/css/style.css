@@ -115,7 +115,7 @@ body {
     text-decoration: underline;
 }
 .footer-heading {
-    padding: 0.5rem;
+    padding: 1rem;
     text-align: center;
     color: #FFF;
     font-size: 1.6rem;
@@ -216,12 +216,19 @@ footer {
     text-decoration: none;
 }
 .copyright {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: #FFF;
     padding: 3rem;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.footer-content a {
+    font-size: 1.4rem;
+    padding: 1rem;
+    color: #FFF;
+    display: block;
+    text-align: center;
 }
 /*--------------------------------------------Profile*/
 .profile-section-card {

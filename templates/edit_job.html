@@ -12,13 +12,13 @@
                     <div class="form-group">
                         <label for="job_title">Job Title</label>
                         <input type="text" class="form-control" id="job_title" name="job_title" minlength="3" 
-                        maxlength="50" placeholder="Please Enter a Job Title" required>
+                        maxlength="50" value="{{ job.job_title }}" placeholder="Please Enter a Job Title" required>
                     </div>
                     <!--Company Name Field-->
                     <div class="form-group">
                         <label for="company_name">Company Name</label>
                         <input type="text" class="form-control" id="company_name" name="company_name" minlength="3" 
-                        maxlength="20" pattern="^[a-zA-Z0-9]{3,20}$" placeholder="Please Enter a Company Name" required>
+                        maxlength="20" value="{{ job.company_name }}" pattern="^[a-zA-Z0-9]{3,20}$" placeholder="Please Enter a Company Name" required>
                     </div>
                     <!--Role Type Field-->
                     <div class="form-group">
@@ -34,31 +34,31 @@
                     <div class="form-group">
                         <label for="job_location">Job Location</label>
                         <input type="text" class="form-control" id="job_location" name="job_location" minlength="3" 
-                        maxlength="20" pattern="^[a-zA-Z0-9]{3,20}$" placeholder="Please Enter a Job Location" required>
+                        maxlength="20" value="{{ job.job_location }}" pattern="^[a-zA-Z0-9]{3,20}$" placeholder="Please Enter a Job Location" required>
                     </div>
                     <!--Job Salary Field-->
                     <div class="form-group">
                         <label for="job_salary">Job Salary</label>
-                        <input type="number" class="form-control" id="job_salary" name="job_salary" min="1" step="1" 
-                        pattern="^[-0-9]$" placeholder="Please Enter a Job Salary" required>
+                        <input type="number" class="form-control" id="job_salary" name="job_salary" min="1" step="1"
+                        value="{{ job.job_salary }}" pattern="^[-0-9]$" placeholder="Please Enter a Job Salary" required>
                     </div>
                     <!--Job Start Date Field-->
                     <div class="form-group">
                         <label for="job_start_date">Start Date</label>
                         <input type="date" class="form-control" id="job_start_date" name="job_start_date" minlength="3" 
-                        maxlength="20" placeholder="Please Enter a Start Date" required>
+                        maxlength="20" value="{{ job.job_start_date }}" placeholder="Please Enter a Start Date" required>
                     </div>
                     <!--Job Overview Field-->
                     <div class="form-group">
                         <label for="job_overview">Job Overview</label>
                         <textarea class="form-control" id="job_overview" name="job_overview" minlength="10" 
-                        maxlength="100" pattern="^[a-zA-Z0-9]{10,100}$" rows="3" placeholder="Please Enter A Brief Overview" required></textarea>
+                        maxlength="100" pattern="^[a-zA-Z0-9]{10,100}$" rows="3" placeholder="Please Enter A Brief Overview" required>{% for overview in job.job_overview %}{{- overview -}}{% endfor %}</textarea>
                     </div>
                     <!--Job Description Field-->
                     <div class="form-group">
                         <label for="job_description">Job Description</label>
                         <textarea class="form-control" id="job_description" name="job_description" minlength="10"
-                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="10" placeholder="Please Enter a Job Description" required></textarea>
+                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="10" placeholder="Please Enter a Job Description" required>{% for description in job.job_description %}{{- description -}}{% endfor %}</textarea>
                     </div>
                     <!--Job Responsibilities Field-->
                     <div class="form-group">
@@ -68,7 +68,7 @@
                             Please enter each responsibility on a new line
                         </small>
                         <textarea class="form-control" id="job_responsibilities" name="job_responsibilities[]" minlength="10"
-                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Responsibilities" required></textarea>
+                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Responsibilities" required>{% for responsibilities in job.job_responsibilities %}{{- responsibilities -}}{% endfor %}</textarea>
                     </div>
                     <!--Job Requirements Field-->
                     <div class="form-group">
@@ -78,7 +78,7 @@
                             Please enter each requirement on a new line
                         </small>                        
                         <textarea class="form-control" id="job_requirements" name="job_requirements[]" minlength="10"
-                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Requirements" required></textarea>
+                        maxlength="500" pattern="^[a-zA-Z0-9]{10,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Requirements" required>{% for requirements in job.job_requirements %}{{- requirements -}}{% endfor %}</textarea>
                     </div>
                     <!--Job Benfits Field-->
                     <div class="form-group">
@@ -88,8 +88,8 @@
                             Please enter each benefit on a new line
                         </small>                        
                         <textarea class="form-control" id="job_benefits" name="job_benefits[]" minlength="3"
-                        maxlength="500" pattern="^[a-zA-Z0-9]{3,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Benefits" required></textarea>
-                    </div>                                                          
+                        maxlength="500" pattern="^[a-zA-Z0-9]{3,500}$" rows="5" aria-multiline="true" placeholder="Please Enter Job Benefits" required>{% for benefits in job.job_benefits %}{{- benefits -}}{% endfor %}</textarea>
+                    </div>
                     <!--Submit Button-->
                     <div>
                         <button type="submit" class="btn-large" id="action-button">

@@ -238,10 +238,11 @@ footer {
 .copyright {
     font-size: 1.2rem;
     color: #FFF;
-    padding: 3rem;
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 7rem 0;
 }
 .footer-content a {
     font-size: 1.4rem;
@@ -255,4 +256,13 @@ footer {
     width: 80%;
     margin: 2rem auto 1rem;
     background-color: #DDD;
+}
+/*--------------------------------------------ABOUT*/
+.about-card {
+    width: 100%;
+    margin: 2rem auto 1rem;
+}
+.about-content {
+    font-size: 1.6rem;
+    text-align: center;
 }

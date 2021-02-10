@@ -88,6 +88,7 @@ def profile(username):
         {"username": session["user"]})["username"]
     if session["user"]:
         jobs = list(mongo.db.jobs.find().sort("_id", -1))
+
         return render_template("profile.html", username=username, jobs=jobs)
 
     return redirect(url_for("sign_in"))

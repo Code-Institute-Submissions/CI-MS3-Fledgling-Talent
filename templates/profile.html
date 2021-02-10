@@ -34,6 +34,8 @@
                         <i class="fas fa-pound-sign"></i>
                         {{ job.job_salary }}
                     </div>
+                    <a href=""><button class="delete-button">Delete</button></a>
+                    <a href="{{ url_for('edit_job', job_id=job._id) }}"><button class="edit-button">Edit</button></a>
                     <div class="job-sub-headings">
                         <i class="fas fa-file-signature"></i>
                         {{ job.role_type }}
@@ -45,7 +47,7 @@
                     <div class="job-sub-headings">
                         <i class="fas fa-thumbtack"></i>
                         {{ job.date_posted }}
-                    </div>                    
+                    </div>               
                     <hr class="horizontal-rule">
                     <div class="job-overview">
                         {{ job.job_overview }}

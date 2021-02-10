@@ -151,6 +151,37 @@ def add_job():
 
 @app.route("/edit_job/<job_id>", methods=["GET", "POST"])
 def edit_job(job_id):
+    if request.method == "POST":
+        submit = {
+            "job_sector": request.form.getlist("job_sector"),
+            "job_title": request.form.get("job_title"),
+            "company_name": request.form.get("company_name"),
+            "role_type": request.form.get("role_type"),
+            "job_location": request.form.get("job_location"),
+            "job_salary": request.form.get("job_salary"),
+            "job_start_date": request.form.get("job_start_date"),
+            "job_overview": request.form.get("job_overview"),
+            "job_description": request.form.get("job_description"),
+            "posted_by": session["user"]
+        }
+        job_responsibilities = {
+            "job_responsibilities": request.form.get(
+                "job_responsibilities[]").split('\n')
+        }
+        job_requirements = {
+            "job_requirements": request.form.get(
+                "job_requirements[]").split('\n')
+        }
+        job_benefits = {
+            "job_benefits": request.form.get("job_benefits[]").split('\n')
+        }
+        submit.update(job_responsibilities)
+        submit.update(job_requirements)
+        submit.update(job_benefits)
+
+        mongo.db.jobs.update({"_id": ObjectId(job_id)}, submit)
+        flash("Job Successfully Updated")
+
     job = mongo.db.jobs.find_one({"_id": ObjectId(job_id)})
 
     return render_template("edit_job.html", job=job)

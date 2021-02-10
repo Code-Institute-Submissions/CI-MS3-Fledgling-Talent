@@ -14,7 +14,7 @@
         <hr class="block-divider block-divider-short">
         <div class="row">
             {% for job in jobs %}
-                {% if session.user|lower == job.created_by|lower %}
+                {% if session.user|lower == job.posted_by|lower %}
                     <div class="col-md-10 job-card">
                         <h3 class="job-headings">{{ job.job_title }}</h3>
                         <div class="job-sub-headings">
@@ -84,9 +84,6 @@
                     </div>
                 {% endif %}
             {% endfor %}
-            {% if jobs|length > 0 %}
-                <h3 class="profile-content">You have not posted any jobs.</h3>
-            {% endif %}
         </div>
     </section>
     {% endblock %}

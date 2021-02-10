@@ -257,6 +257,12 @@ footer {
     margin: 2rem auto 1rem;
     background-color: #DDD;
 }
+.profile-content {
+    text-align: center;
+    font-size: 1.6rem;
+    margin: auto;
+    padding: 2rem;
+}
 /*--------------------------------------------ABOUT*/
 .about-card {
     width: 100%;

@@ -122,6 +122,10 @@ body {
     text-decoration: underline;
     margin: 0;
 }
+.profile-sub-headings {
+    font-size: 1.6rem;
+    padding: 2rem;
+}
 /*--------------------------------------------Jobs*/
 .job-card {
     width: 100%;
@@ -218,4 +222,10 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+/*--------------------------------------------Profile*/
+.profile-section-card {
+    width: 80%;
+    margin: 2rem auto 1rem;
+    background-color: #DDD;
 }

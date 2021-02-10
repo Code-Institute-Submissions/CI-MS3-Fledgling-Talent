@@ -87,7 +87,8 @@ def profile(username):
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
     if session["user"]:
-        return render_template("profile.html", username=username)
+        jobs = list(mongo.db.jobs.find().sort("_id", -1))
+        return render_template("profile.html", username=username, jobs=jobs)
 
     return redirect(url_for("sign_in"))
 
@@ -145,6 +146,13 @@ def add_job():
 
     jobs = list(mongo.db.jobs.find().sort("_id", -1))
     return render_template("add_job.html", jobs=jobs)
+
+
+@app.route("/edit_job/<job_id>", methods=["GET", "POST"])
+def edit_job(job_id):
+    job = mongo.db.jobs.find_one({"_id": ObjectId(job_id)})
+
+    return render_template("edit_job.html", job=job)
 
 
 if __name__ == "__main__":

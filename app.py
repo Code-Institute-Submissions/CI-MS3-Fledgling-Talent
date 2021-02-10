@@ -115,7 +115,6 @@ def get_jobs():
 def add_job():
     if request.method == "POST":
         job = {
-            "job_sector": request.form.getlist("job_sector"),
             "job_title": request.form.get("job_title"),
             "company_name": request.form.get("company_name"),
             "role_type": request.form.get("role_type"),
@@ -153,7 +152,6 @@ def add_job():
 def edit_job(job_id):
     if request.method == "POST":
         submit = {
-            "job_sector": request.form.getlist("job_sector"),
             "job_title": request.form.get("job_title"),
             "company_name": request.form.get("company_name"),
             "role_type": request.form.get("role_type"),
@@ -185,6 +183,13 @@ def edit_job(job_id):
     job = mongo.db.jobs.find_one({"_id": ObjectId(job_id)})
 
     return render_template("edit_job.html", job=job)
+
+
+@app.route("/delete_job/<job_id>")
+def delete_job(job_id):
+    mongo.db.jobs.remove({"_id": ObjectId(job_id)})
+    flash("Job Successfully Deleted")
+    return redirect(url_for("get_jobs"))
 
 
 if __name__ == "__main__":

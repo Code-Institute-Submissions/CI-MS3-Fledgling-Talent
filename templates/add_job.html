@@ -39,8 +39,12 @@
                     <!--Job Salary Field-->
                     <div class="form-group">
                         <label for="job_salary">Job Salary</label>
-                        <input type="number" class="form-control" id="job_salary" name="job_salary" min="1" step="1" 
-                        pattern="^[-0-9]$" placeholder="Please Enter a Job Salary" required>
+                        <small class="form-text text-muted help-block">
+                            <i class="fas fa-info-circle"></i>
+                            Please enter salary using the format 30,000
+                        </small>
+                        <input type="text" class="form-control" id="job_salary" name="job_salary" min="1" step="1" 
+                        pattern="\d{1,3},\d{3}$" placeholder="Please Enter a Job Salary" required>
                     </div>
                     <!--Job Overview Field-->
                     <div class="form-group">

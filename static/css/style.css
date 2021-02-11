@@ -107,6 +107,26 @@ body {
     border: 0.2rem solid #000;
     color: #FFF;
 }
+.delete-button-modal {
+    float: right;
+    font-size: 1.2rem;
+    margin: 1rem;
+    margin-right: 3rem;
+    padding: 0.5rem 0.5rem;
+    background-color: #CF2A27;
+    border: 0.2rem solid #000;
+    color: #FFF;
+}
+.cancel-button-modal {
+    float: right;
+    font-size: 1.2rem;
+    margin: 1rem;
+    margin-right: 3rem;
+    padding: 0.5rem 0.5rem;
+    background-color: #38B000;
+    border: 0.2rem solid #000;
+    color: #FFF;
+}
 /*--------------------------------------------Images*/
 #hero-image {
     background: url("../images/hero-image.jpg") no-repeat center center;
@@ -262,6 +282,14 @@ footer {
     font-size: 1.6rem;
     margin: auto;
     padding: 2rem;
+}
+.modal-text {
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 2rem;
+}
+.modal {
+    margin-top: 5rem;
 }
 /*--------------------------------------------ABOUT*/
 .about-card {

@@ -5,6 +5,7 @@ from flask import (
 from flask_pymongo import PyMongo
 from bson.objectid import ObjectId
 from werkzeug.security import generate_password_hash, check_password_hash
+from datetime import datetime
 if os.path.exists("env.py"):
     import env
 
@@ -114,6 +115,7 @@ def get_jobs():
 @app.route("/add_job", methods=["GET", "POST"])
 def add_job():
     if request.method == "POST":
+        todays_date = datetime.today().strftime('%d-%m-%y')
         job = {
             "job_title": request.form.get("job_title"),
             "company_name": request.form.get("company_name"),
@@ -123,6 +125,7 @@ def add_job():
             "job_start_date": request.form.get("job_start_date"),
             "job_overview": request.form.get("job_overview"),
             "job_description": request.form.get("job_description"),
+            "date_posted": todays_date,
             "posted_by": session["user"]
         }
         job_responsibilities = {
@@ -151,6 +154,7 @@ def add_job():
 @app.route("/edit_job/<job_id>", methods=["GET", "POST"])
 def edit_job(job_id):
     if request.method == "POST":
+        todays_date = datetime.today().strftime('%d-%m-%y')
         submit = {
             "job_title": request.form.get("job_title"),
             "company_name": request.form.get("company_name"),
@@ -160,6 +164,7 @@ def edit_job(job_id):
             "job_start_date": request.form.get("job_start_date"),
             "job_overview": request.form.get("job_overview"),
             "job_description": request.form.get("job_description"),
+            "date_posted": todays_date,
             "posted_by": session["user"]
         }
         job_responsibilities = {

@@ -128,7 +128,6 @@ def add_job():
     Add Job page - Allows users to post new jobs
     """
     if request.method == "POST":
-        todays_date = datetime.today().strftime('%d-%m-%y')
         job = {
             "job_title": request.form.get("job_title"),
             "company_name": request.form.get("company_name"),
@@ -137,7 +136,7 @@ def add_job():
             "job_salary": request.form.get("job_salary"),
             "job_overview": request.form.get("job_overview"),
             "job_description": request.form.get("job_description"),
-            "date_posted": todays_date,
+            "date_posted": datetime.today().strftime('%d-%m-%y'),
             "posted_by": session["user"]
         }
         job_responsibilities = {
@@ -169,7 +168,6 @@ def edit_job(job_id):
     Edit Job page - Allows users to edit jobs they have posted
     """
     if request.method == "POST":
-        todays_date = datetime.today().strftime('%d-%m-%y')
         submit = {
             "job_title": request.form.get("job_title"),
             "company_name": request.form.get("company_name"),
@@ -178,7 +176,7 @@ def edit_job(job_id):
             "job_salary": request.form.get("job_salary"),
             "job_overview": request.form.get("job_overview"),
             "job_description": request.form.get("job_description"),
-            "date_posted": todays_date,
+            "date_posted": datetime.today().strftime('%d-%m-%y'),
             "posted_by": session["user"]
         }
         job_responsibilities = {

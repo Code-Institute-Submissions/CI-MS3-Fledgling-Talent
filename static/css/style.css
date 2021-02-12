@@ -261,6 +261,9 @@ footer {
     padding: 1rem 0.5rem;
     text-decoration: none;
 }
+.social-icon:hover {
+    color: #118AB2;
+}
 .copyright {
     font-size: 1.2rem;
     color: #FFF;

@@ -19,21 +19,22 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
-# Home Page
 @app.route("/")
 @app.route("/home")
 def home():
-    # Finds two most recent jobs posted and shows limit of 2
+    """
+    Renders home page template, showing the 2 most recent jobs posted
+    """
     jobs = list(mongo.db.jobs.find().sort("_id", -1).limit(2))
-    # Renders home page template
     return render_template("index.html", jobs=jobs)
 
 
-# Register Page - Allows users to register an account
 @app.route("/register", methods=["GET", "POST"])
 def register():
+    """
+    Register page - allows users to register an account if username not taken
+    """
     if request.method == "POST":
-        # Check if username already exists in DB
         existing_user = mongo.db.users.find_one(
             {"username": request.form.get("username").lower()})
 
@@ -55,9 +56,11 @@ def register():
     return render_template("register.html")
 
 
-# Sign In Page - Allows users to sign in if they have an account
 @app.route("/sign_in", methods=["GET", "POST"])
 def sign_in():
+    """
+    Sign In page - allows users to sign in if they have an account
+    """
     if request.method == "POST":
         # Check if username exists in DB
         existing_user = mongo.db.users.find_one(
@@ -66,12 +69,10 @@ def sign_in():
         if existing_user:
             # Ensure hashed password matches user input
             if check_password_hash(
-                    existing_user["password"], request.form.get("password")):
-                        session["user"] = request.form.get("username").lower()
-                        flash("Welcome, {}".format(
-                            request.form.get("username")))
-                        return redirect(url_for(
-                            "profile", username=session["user"]))
+             existing_user["password"], request.form.get("password")):
+                session["user"] = request.form.get("username").lower()
+                flash("Welcome, {}".format(request.form.get("username")))
+                return redirect(url_for("profile", username=session["user"]))
 
             else:
                 # Invalid password match
@@ -85,9 +86,11 @@ def sign_in():
     return render_template("sign_in.html")
 
 
-# Profile Page - Shows users their profile page and jobs they have posted
 @app.route("/profile/<username>", methods=["GET", "POST"])
 def profile(username):
+    """
+    Profile page - Shows users their profile page and jobs they have posted
+    """
     # Get the session user's username from the DB
     username = mongo.db.users.find_one(
         {"username": session["user"]})["username"]
@@ -100,27 +103,30 @@ def profile(username):
     return redirect(url_for("sign_in"))
 
 
-# Sign Out - Allows users to sign out
 @app.route("/sign_out")
 def sign_out():
-    # Remove user from session cookies and logs them out
+    """
+    Sign Out page - Allows user to sign out and removes session cookies
+    """
     flash("You have been logged out")
-    session.pop("user")
+    session.clear("user")
     return redirect(url_for("sign_in"))
 
 
-# Jobs Page - Shows all users jobs that have been posted
 @app.route("/get_jobs")
 def get_jobs():
-    # Shows all jobs posted in order of most recent first
+    """
+    Jobs page - Shows all jobs that have been posted, with most recent first
+    """
     jobs = list(mongo.db.jobs.find().sort("_id", -1))
     return render_template("jobs.html", jobs=jobs)
 
 
-# Add Job Page - Allows users to post new jobs
 @app.route("/add_job", methods=["GET", "POST"])
 def add_job():
-    # Inserts new job into DB
+    """
+    Add Job page - Allows users to post new jobs
+    """
     if request.method == "POST":
         todays_date = datetime.today().strftime('%d-%m-%y')
         job = {
@@ -157,10 +163,11 @@ def add_job():
     return render_template("add_job.html", jobs=jobs)
 
 
-# Edit Job Page - Allows users to edit jobs that they have posted
 @app.route("/edit_job/<job_id>", methods=["GET", "POST"])
 def edit_job(job_id):
-    # Allows user to edit job if they have posted it
+    """
+    Edit Job page - Allows users to edit jobs they have posted
+    """
     if request.method == "POST":
         todays_date = datetime.today().strftime('%d-%m-%y')
         submit = {
@@ -197,10 +204,11 @@ def edit_job(job_id):
     return render_template("edit_job.html", job=job)
 
 
-# Delete Function - Allows users to delete jobs they have posted
 @app.route("/delete_job/<job_id>")
 def delete_job(job_id):
-    # Removes the job which is filtered using the job_id
+    """
+    Delete - Allows users to delete jobs they have posted using job_id
+    """
     mongo.db.jobs.remove({"_id": ObjectId(job_id)})
     flash("Job Successfully Deleted")
     return redirect(url_for("get_jobs"))

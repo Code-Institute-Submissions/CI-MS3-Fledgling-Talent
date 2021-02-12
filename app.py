@@ -109,7 +109,7 @@ def sign_out():
     Sign Out page - Allows user to sign out and removes session cookies
     """
     flash("You have been logged out")
-    session.clear("user")
+    session.clear()
     return redirect(url_for("sign_in"))
 
 

@@ -123,6 +123,15 @@ body {
     background-color: #38B000;
     color: #FFF;
 }
+#search-button:hover {
+    font-size: 1.6rem;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid #000;
+    background-color: #38B000;
+    color: #FFF;
+    text-decoration: underline;
+}
 .delete-button-modal {
     float: right;
     font-size: 1.2rem;

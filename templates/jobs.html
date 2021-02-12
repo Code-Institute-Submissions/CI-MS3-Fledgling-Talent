@@ -1,5 +1,25 @@
 {% extends "base.html" %}
 {% block content %}
+<!-- ================================================ SEARCH BAR ================================================--> 
+    <div class="row">
+        <div class="col-md-10 search-container">
+            <form action="{{ url_for('search') }}" method="POST">
+                <div class="input-field">
+                    <i class="fas fa-search"></i>
+                    <label for="query"><h3 class="headings">Search</h3></label>
+                    <input type="text" name="query" id="query" minlength="3" required>
+                    <small class="form-text text-muted help-block" id="search-help">
+                    <i class="fas fa-info-circle"></i>
+                        You are able to search by job title or location
+                    </small>
+                </div>
+                <div class="search-button-container">
+                    <a href="{{ url_for('search') }}"><button id="search-button">Search</button></a>
+                    <a href="{{ url_for('get_jobs') }}" id="reset-button">Reset</a>
+                </div>
+            </form>
+        </div>
+    </div>
 <!-- ================================================ CURRENT JOBS ================================================--> 
     <section class="job-section">
         <h3 class="headings">Current Jobs</h3>

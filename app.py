@@ -122,6 +122,16 @@ def get_jobs():
     return render_template("jobs.html", jobs=jobs)
 
 
+@app.route("/search", methods=["GET", "POST"])
+def search():
+    """
+    Search - Allows users to search for jobs via job_title or job_location
+    """
+    query = request.form.get("query")
+    jobs = list(mongo.db.jobs.find({"$text": {"$search": query}}))
+    return render_template("jobs.html", jobs=jobs)
+
+
 @app.route("/add_job", methods=["GET", "POST"])
 def add_job():
     """

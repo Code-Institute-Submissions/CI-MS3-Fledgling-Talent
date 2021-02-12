@@ -90,7 +90,7 @@ body {
 .edit-button {
     float: right;
     font-size: 1.2rem;
-    margin: 1rem;
+    margin: 0.5rem;
     margin-right: 2rem;
     padding: 0.5rem 1.2rem;
     background-color: #38B000;
@@ -100,11 +100,27 @@ body {
 .delete-button {
     float: right;
     font-size: 1.2rem;
-    margin: 1rem;
+    margin: 0.5rem;
     margin-right: 3rem;
-    padding: 0.5rem 0.5rem;
+    padding: 0.5rem;
     background-color: #118AB2;
     border: 0.2rem solid #000;
+    color: #FFF;
+}
+#reset-button {
+    font-size: 1.6rem;
+    margin: 1rem;
+    padding: 0.5rem 1.4rem;
+    border: 0.2rem solid #000;
+    background-color: #118AB2;
+    color: #FFF;
+}
+#search-button {
+    font-size: 1.6rem;
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+    border: 0.2rem solid #000;
+    background-color: #38B000;
     color: #FFF;
 }
 .delete-button-modal {
@@ -300,7 +316,7 @@ footer {
 .modal {
     margin-top: 5rem;
 }
-/*--------------------------------------------ABOUT*/
+/*--------------------------------------------About*/
 .about-card {
     width: 100%;
     margin: 2rem auto 1rem;
@@ -316,4 +332,42 @@ footer {
     padding: 1rem;
     text-decoration: underline;
     text-underline-offset: 0.5rem;
+}
+/*--------------------------------------------Search*/
+.search-container {
+    width: 100%;
+    background-color: #DDD;
+    margin: 5rem auto;
+    padding: 0.5rem;
+    text-align: center;
+    border: 0.2rem solid #000;
+}
+.input-field label {
+    font-size: 2rem;
+    padding: 1rem;
+}
+.input-field input {
+    width: 50%;
+    line-height: 3rem;
+    border: 0.2rem solid #000;
+}
+.input-field i {
+    font-size: 2rem;
+}
+#query {
+    font-size: 1.4rem;
+    padding: 0 0.5rem ;
+    border: 0.2rem solid #000;
+}
+.search-button-container {
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+}
+#search-help {
+    font-size: 1.2rem;
+    padding: 0;
+    margin: 0;
+}
+#search-help i {
+    font-size: 1rem;
 }

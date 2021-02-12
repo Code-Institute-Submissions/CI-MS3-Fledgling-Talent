@@ -134,6 +134,12 @@ body {
     width: 100%;
     background-size: cover;
 }
+#profile-hero-image {
+    background: url("../images/profile-hero-image.jpg") no-repeat center center;
+    height: 50vh;
+    width: 100%;
+    background-size: cover;  
+}
 /*--------------------------------------------Headings*/
 .headings {
     font-size: 2rem;

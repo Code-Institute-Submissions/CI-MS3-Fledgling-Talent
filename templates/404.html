@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content%}
+    <div class="row">
+        <div class="col-md-10 error-card">
+            <h3 class="error-heading">Sorry, we can't find the page you were looking for.</h3>
+        </div>
+        <div class="error-content">
+            <a href="{{ url_for('home') }}">Go back to Home Page</a>
+        </div>
+    </div>
+{% endblock %}

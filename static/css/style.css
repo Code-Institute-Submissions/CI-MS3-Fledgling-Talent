@@ -382,3 +382,16 @@ footer {
 #search-help i {
     font-size: 1rem;
 }
+/*--------------------------------------------Error Pages*/
+.error-card {
+    text-align: center;
+    width: 100%;
+}
+.error-heading {
+    text-align: center;
+    font-size: 2rem;
+}
+.error-content {
+    text-align: center;
+    font-size: 1.6rem;
+}

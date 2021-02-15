@@ -19,6 +19,14 @@ app.secret_key = os.environ.get("SECRET_KEY")
 mongo = PyMongo(app)
 
 
+@app.errorhandler(404)
+def page_note_found(e):
+    """
+    Displays page not found error
+    """
+    return render_template("404.html"), 404
+
+
 @app.route("/")
 @app.route("/home")
 def home():

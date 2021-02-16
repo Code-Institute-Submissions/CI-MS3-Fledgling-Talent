@@ -71,7 +71,7 @@ body {
     border-color: #000;
 }
 .form-section {
-    min-height: 70vh;
+    min-height: 75vh;
 }
 /*--------------------------------------------Buttons*/
 #action-button {
@@ -395,7 +395,7 @@ footer {
 /*--------------------------------------------Error Pages*/
 .error-container {
     margin: 4rem 2rem;
-    min-height: 65vh;
+    min-height: 70vh;
 }
 .error-card {
     text-align: center;

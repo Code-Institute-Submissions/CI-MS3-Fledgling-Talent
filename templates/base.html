@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-          integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
-          integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+        integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.1.1/css/hover-min.css"
-          type="text/css"/>
+        type="text/css"/>
     <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" type="text/css">
     {% block styles%}
@@ -21,20 +21,20 @@
     <header>
          <nav class="navbar navbar-expand-lg navbar-dark">
             <a class="navbar-brand" href="{{ url_for('home') }}"><img src="{{ url_for('static', filename='images/logo.png') }}" class="logo" alt="Logo"></a>
-                <a class="navbar-brand" href="{{ url_for('home') }}">
-                    <h1>Fledgling Talent</h1>
-                </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse" id="navbar-button" data-target="#Navbar">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
+            <a class="navbar-brand" href="{{ url_for('home') }}">
+                <h1>Fledgling Talent</h1>
+            </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" id="navbar-button" data-target="#Navbar">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
             <div class="collapse navbar-collapse flex-grow-1 text-right" id="Navbar">
                 <ul class="navbar-nav ml-auto flex-nowrap">
                     {% if session.user %}
-                    <li class="nav-item">
-                        <a href="{{ url_for('get_jobs') }}" class="nav-link">
-                            <h4>Find Jobs</h4>
-                        </a>
-                    </li>
+                        <li class="nav-item">
+                            <a href="{{ url_for('get_jobs') }}" class="nav-link">
+                                <h4>Find Jobs</h4>
+                            </a>
+                        </li>
                         <li class="nav-item">
                             <a href="{{ url_for('add_job') }}" class="nav-link">
                                 <h4>Post Jobs</h4>
@@ -67,7 +67,7 @@
         </nav>
     </header>
 <!-- ================================================ FLASH MESSAGES ================================================--> 
-    <section class="flash-message-section">
+    <div class="flash-message-section">
         {% with messages = get_flashed_messages() %}
             {% if messages %}
                 {% for message in messages %}
@@ -77,7 +77,7 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
-    </section>
+    </div>
 <!-- ============================================== CONTENT TO INJECT ==============================================-->  
     {% block content %}
     {% endblock %}
@@ -111,7 +111,6 @@
             </div>                            
         </div>
     </footer>
-
 </div>
 <!-- ================================================ SCRIPTS ================================================--> 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"

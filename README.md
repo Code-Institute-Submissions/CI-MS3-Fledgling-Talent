@@ -459,7 +459,7 @@ The W3C Markup Validator, W3C CSS Validator, JSHint and PEP8 Online services wer
 
 [JSHint](https://jshint.com/)
 
-* No customer JavaScript was used in this project, so this test was not conducted
+* No custom JavaScript was used in this project, so this test was not conducted
 
 
 
@@ -512,6 +512,7 @@ The following devices were used:
 
 * iPad Mini / iPad Air - Safari Browser
   * User was able to see Find Jobs and Post Jobs links in footer even when not signed in
+  * Whitespace appearing below the footer on the Sign In, Register and Error pages
 
 
 
@@ -522,6 +523,7 @@ The following devices were used:
 
 * iMac - OS X Yosemite - Safari Browser
   * User was able to see Find Jobs and Post Jobs links in footer even when not signed in
+  * Whitespace appearing below the footer on the Sign In, Register and Error pages
 
 
 
@@ -554,8 +556,6 @@ The following devices were used:
 
 ##### Known Bugs
 
-* Whitespace below the footer on the iPad Pro when viewing any error pages - this was ignored as the page still fully functions
-* Whitespace below the footer on the iPad when viewing the Sign In or Register pages - this was ignored as the page still full functions
 * In the search container, the 'Search' button is actually a button, however the 'Reset' button is designed to look like one - the search function would only work this way, but it works as intended so has been left this way
 * Some elements of the form require validation, but have no REGEX pattern requirement. Instead, a small helper message is posted next to this to assist the user with the proper formatting for posting/editing a job. This approach was chosen as limiting it using REGEX would make the form too difficult to complete, therefore causing a bad UX. As it is a community jobs board, the mentality would be that users are there to help others, so would conform to the requested format.
 

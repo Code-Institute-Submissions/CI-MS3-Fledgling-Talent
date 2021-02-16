@@ -211,6 +211,14 @@ Some elements of the form require validation, but have no REGEX pattern requirem
 
 
 
+###### Data Schema
+
+MongoDB was used to host the database and the following schema was designed:
+
+![](static/readme-images/db-schema.png)
+
+
+
 #### 4. Skeleton
 
 * Wireframe was created using [Balsamiq](https://balsamiq.com/)

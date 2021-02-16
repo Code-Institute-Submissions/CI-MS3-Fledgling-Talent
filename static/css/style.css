@@ -82,12 +82,12 @@ body {
 .more-info-button {
     float: right;
     font-size: 1.4rem;
-    padding: 0.5rem;
+    padding: 0.4rem;
     background-color: #CF2A27;
     color: #FFF;
     display: block;
     border: 0.2rem solid #000;
-    margin: 1rem;
+    margin-right: 1rem;
 }
 .edit-button {
     float: right;

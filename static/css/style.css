@@ -87,7 +87,7 @@ body {
     color: #FFF;
     display: block;
     border: 0.2rem solid #000;
-    margin-right: 2rem;
+    margin: 1rem;
 }
 .edit-button {
     float: right;

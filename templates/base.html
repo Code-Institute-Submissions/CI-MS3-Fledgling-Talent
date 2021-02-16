@@ -87,8 +87,10 @@
             <div class="col-12 col-xl-4 footer-col">
                 <h5 class="footer-heading">Site Links:</h5>
                 <p class="footer-content">
+                {% if session.user %}
                     <a href="{{ url_for('get_jobs') }}">Find Jobs</a>
                     <a href="{{ url_for('add_job') }}">Post Jobs</a>
+                {% endif %}
                     <a href="{{ url_for('register') }}">Register</a>
                 </p>
             </div>

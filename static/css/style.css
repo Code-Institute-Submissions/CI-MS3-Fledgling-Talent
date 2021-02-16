@@ -395,6 +395,7 @@ footer {
 /*--------------------------------------------Error Pages*/
 .error-container {
     margin: 4rem 2rem;
+    min-height: 65vh;
 }
 .error-card {
     text-align: center;

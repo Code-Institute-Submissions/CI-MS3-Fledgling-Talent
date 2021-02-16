@@ -70,6 +70,9 @@ body {
 .horizontal-rule {
     border-color: #000;
 }
+.form-section {
+    min-height: 70vh;
+}
 /*--------------------------------------------Buttons*/
 #action-button {
     font-size: 2rem;

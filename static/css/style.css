@@ -102,7 +102,7 @@ body {
     transform: scale(1.1);
     transition: 0.2s;
 }
-.edit-button {
+#edit-button {
     float: right;
     font-size: 1.2rem;
     margin: 0.5rem;
@@ -112,11 +112,11 @@ body {
     border: 0.2rem solid #000;
     color: #FFF;
 }
-.edit-button:hover {
+#edit-button:hover {
     transform: scale(1.1);
     transition: 0.2s;
 }
-.delete-button {
+#delete-button {
     float: right;
     font-size: 1.2rem;
     margin: 0.5rem;
@@ -126,7 +126,7 @@ body {
     border: 0.2rem solid #000;
     color: #FFF;
 }
-.delete-button:hover {
+#delete-button:hover {
     transform: scale(1.1);
     transition: 0.2s;
 }
@@ -155,7 +155,7 @@ body {
     color: #FFF;
     text-decoration: underline;
 }
-.delete-button-modal {
+#delete-button-modal {
     float: right;
     font-size: 1.2rem;
     margin: 1rem;
@@ -165,7 +165,11 @@ body {
     border: 0.2rem solid #000;
     color: #FFF;
 }
-.cancel-button-modal {
+#delete-button-modal:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+#cancel-button-modal {
     float: right;
     font-size: 1.2rem;
     margin: 1rem;
@@ -174,6 +178,10 @@ body {
     background-color: #38B000;
     border: 0.2rem solid #000;
     color: #FFF;
+}
+#cancel-button-modal:hover {
+    transform: scale(1.1);
+    transition: 0.2s;
 }
 /*--------------------------------------------Images*/
 #hero-image {

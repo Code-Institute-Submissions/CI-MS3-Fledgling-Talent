@@ -47,8 +47,8 @@
                             {{ job.job_salary }}
                         </div>
                         <!--Edit/Delete Buttons-->
-                        <a href="#delete-modal-{{job._id}}" data-target="#delete-modal-{{job._id}}" data-toggle="modal"><button class="delete-button">Delete</button></a>
-                        <a href="{{ url_for('edit_job', job_id=job._id) }}"><button class="edit-button">Edit</button></a>
+                        <a href="#delete-modal-{{job._id}}" data-target="#delete-modal-{{job._id}}" data-toggle="modal" id="delete-button">Delete</a>
+                        <a href="{{ url_for('edit_job', job_id=job._id) }}" id="edit-button">Edit</a>
                         <!--Role Type-->
                         <div class="job-sub-headings">
                             <i class="fas fa-file-signature"></i>
@@ -108,8 +108,8 @@
                                 </div>
                                 <!--Modal Buttons-->
                                 <div class="modal-footer">
-                                    <a href="{{ url_for('delete_job', job_id=job._id ) }}"><button class="delete-button-modal">Delete</button></a>
-                                    <a href="{{ url_for('profile', username=session['user']) }}"><button class="cancel-button-modal">Cancel</button></a>
+                                    <a href="{{ url_for('delete_job', job_id=job._id ) }}" id="delete-button-modal">Delete</a>
+                                    <a href="{{ url_for('profile', username=session['user']) }}" id="cancel-button-modal">Cancel</a>
                                 </div>
                             </div>
                         </div>

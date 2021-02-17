@@ -23,10 +23,14 @@
                     <div class="form-group">
                         <label for="role_type">Role Type</label>
                         <select class="form-control" id="role_type" name="role_type" required>
-                            <option value="">&nbsp;</option>
-                            <option>Temporary</option>
-                            <option>Permanent</option>
-                            <option>Fixed Term Contract</option>
+                            <option value="" disabled>&nbsp;</option>
+                            {% for role_type in role_type %}
+                                {% if role_type.role_type == job.role_type %}
+                                    <option value="{{ role_type.role_type }}" selected>{{ role_type.role_type }}</option>
+                                {% else %}
+                                    <option value="{{ role_type.role_type }}">{{ role_type.role_type }}</option>
+                                {% endif %}
+                            {% endfor %}
                         </select>
                     </div>
                     <!--Job Location Field-->

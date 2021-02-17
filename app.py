@@ -235,8 +235,9 @@ def edit_job(job_id):
         flash("Job Successfully Updated")
 
     job = mongo.db.jobs.find_one({"_id": ObjectId(job_id)})
+    role_type = mongo.db.role_type.find()
 
-    return render_template("edit_job.html", job=job)
+    return render_template("edit_job.html", job=job, role_type=role_type)
 
 
 @app.route("/delete_job/<job_id>")

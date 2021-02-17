@@ -427,7 +427,11 @@ MongoDB was used to host the database and the following schema was designed:
 
   * The button to delete jobs not posted by Testuser2 did not appear
 
-    
+* Search - Able to search for roles via job title and location with success
+
+  * Reset button works and shows all jobs again
+
+  
 
 ##### Validation
 
@@ -440,6 +444,8 @@ The W3C Markup Validator, W3C CSS Validator, JSHint and PEP8 Online services wer
 ![](static/testing-images/html-validator-whole-site.png)
 
 ![](static/testing-images/html-validator-index.png)
+
+![](static/testing-images/html-validator-get-jobs.png)
 
 ![](static/testing-images/html-validator-add-job.png)
 
@@ -545,6 +551,8 @@ The following devices were used:
 * Error - The first child *option* element of a *select* element with a required attribute, and without a *multiple* attribute, and without a *size* attribute whose value is greater than *1*, must have either an empty *value* attribute, or must have no text content - [Fixed](https://stackoverflow.com/questions/22237658/html5-validation-error-with-select-required-attribute/31800584)
 * Warning - Section lacks heading
 * Error - Aria-controls attribute must point to an element in the same document - [Fixed](https://webmasters.stackexchange.com/questions/60241/w3c-validation-error-aria-controls-attribute-must-point-to-an-element-in-the-sa)
+* Error - The element button must not appear as a descendant of the a element - Fixed with help of Ed Bradley on Slack
+* Error - h3 cannot appear as child of label
 
 
 
@@ -556,8 +564,8 @@ The following devices were used:
 
 ##### Known Bugs
 
-* In the search container, the 'Search' button is actually a button, however the 'Reset' button is designed to look like one - the search function would only work this way, but it works as intended so has been left this way
 * Some elements of the form require validation, but have no REGEX pattern requirement. Instead, a small helper message is posted next to this to assist the user with the proper formatting for posting/editing a job. This approach was chosen as limiting it using REGEX would make the form too difficult to complete, therefore causing a bad UX. As it is a community jobs board, the mentality would be that users are there to help others, so would conform to the requested format.
+  * Although this is not a bug, I felt I should address the reasoning behind choosing to have to REGEX pattern
 
 
 

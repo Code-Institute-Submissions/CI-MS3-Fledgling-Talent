@@ -25,83 +25,87 @@
         <h3 class="headings">Current Jobs</h3>
         <hr class="block-divider block-divider-short">
         <div class="row">
-            {% for job in jobs %}
-                <div class="col-md-10 job-card">
-                    <!--Job Title-->
-                    <h3 class="job-headings">{{ job.job_title }}</h3>
-                    <!--Company Name-->
-                    <div class="job-sub-headings">
-                        <i class="fas fa-briefcase"></i>
-                        {{ job.company_name }}
-                    </div>
-                    <div>
-                    <!--More Info Button-->
-                        <button class="more-info-button" data-toggle="collapse" data-target="#job-description-collapse{{job._id}}"
-                            aria-expanded="false" aria-controls="job-description-collapse{{job._id}}">
-                            <i class="fas fa-info-circle info-icon"></i>
-                            More Information
-                        </button>
-                    </div>
-                    <!--Job Location-->
-                    <div class="job-sub-headings">
-                        <i class="fas fa-map-marker-alt"></i>
-                        {{ job.job_location }}
-                    </div>
-                    <!--Job Salary-->
-                    <div class="job-sub-headings">
-                        <i class="fas fa-pound-sign"></i>
-                        {{ job.job_salary }}
-                    </div>
-                    <!--Role Type-->
-                    <div class="job-sub-headings">
-                        <i class="fas fa-file-signature"></i>
-                        {{ job.role_type }}
-                    </div>
-                    <!--Date Posted-->
-                    <div class="job-sub-headings">
-                        <i class="fas fa-thumbtack"></i>
-                        {{ job.date_posted }}
-                    </div>                    
-                    <hr class="horizontal-rule">
-                    <!--Job Overview-->
-                    <div class="job-overview">
-                        {{ job.job_overview }}
-                    </div>
-                    <hr class="horizontal-rule">
-                    <!--Job Extra Info Collapse-->
-                    <div class="collapse" id="job-description-collapse{{job._id}}">
-                        <!--Job Description-->
-                        <div class="job-description">
-                            <h5 class="job-extra-heading">Job Description:</h5>
-                            {{ job.job_description }}
+            {% if jobs|length > 0 %}
+                {% for job in jobs %}
+                    <div class="col-md-10 job-card">
+                        <!--Job Title-->
+                        <h3 class="job-headings">{{ job.job_title }}</h3>
+                        <!--Company Name-->
+                        <div class="job-sub-headings">
+                            <i class="fas fa-briefcase"></i>
+                            {{ job.company_name }}
                         </div>
-                        <!--Job Responsibilities-->
-                        <h5 class="job-extra-heading">Responsibilities:</h5>
-                        <ul class="job-content">
-                            {% for responsibility in job.job_responsibilities %}
-                                <li>{{ responsibility }}</li>
-                            {% endfor %}
-                        </ul>
-                        <!--Job Requirements-->
-                        <h5 class="job-extra-heading">Requirements:</h5>
-                        <ul class="job-content">
-                            {% for requirement in job.job_requirements %}
-                                <li>{{ requirement }}</li>
-                            {% endfor %}
-                        </ul>
-                        <!--Job Benefits-->
-                        <h5 class="job-extra-heading">Benefits:</h5>
-                        <ul class="job-content">
-                            {% for benefit in job.job_benefits %}
-                                <li>{{ benefit }}</li>
-                            {% endfor %}
-                        </ul>
-                        <!--Job Posted By-->
-                        <h5 class="job-extra-heading">Posted By:</h5>
-                        <p class="posted-by">{{ job.posted_by|capitalize }}</p>                           
+                        <div>
+                        <!--More Info Button-->
+                            <button class="more-info-button" data-toggle="collapse" data-target="#job-description-collapse{{job._id}}"
+                                aria-expanded="false" aria-controls="job-description-collapse{{job._id}}">
+                                <i class="fas fa-info-circle info-icon"></i>
+                                More Information
+                            </button>
+                        </div>
+                        <!--Job Location-->
+                        <div class="job-sub-headings">
+                            <i class="fas fa-map-marker-alt"></i>
+                            {{ job.job_location }}
+                        </div>
+                        <!--Job Salary-->
+                        <div class="job-sub-headings">
+                            <i class="fas fa-pound-sign"></i>
+                            {{ job.job_salary }}
+                        </div>
+                        <!--Role Type-->
+                        <div class="job-sub-headings">
+                            <i class="fas fa-file-signature"></i>
+                            {{ job.role_type }}
+                        </div>
+                        <!--Date Posted-->
+                        <div class="job-sub-headings">
+                            <i class="fas fa-thumbtack"></i>
+                            {{ job.date_posted }}
+                        </div>                    
+                        <hr class="horizontal-rule">
+                        <!--Job Overview-->
+                        <div class="job-overview">
+                            {{ job.job_overview }}
+                        </div>
+                        <hr class="horizontal-rule">
+                        <!--Job Extra Info Collapse-->
+                        <div class="collapse" id="job-description-collapse{{job._id}}">
+                            <!--Job Description-->
+                            <div class="job-description">
+                                <h5 class="job-extra-heading">Job Description:</h5>
+                                {{ job.job_description }}
+                            </div>
+                            <!--Job Responsibilities-->
+                            <h5 class="job-extra-heading">Responsibilities:</h5>
+                            <ul class="job-content">
+                                {% for responsibility in job.job_responsibilities %}
+                                    <li>{{ responsibility }}</li>
+                                {% endfor %}
+                            </ul>
+                            <!--Job Requirements-->
+                            <h5 class="job-extra-heading">Requirements:</h5>
+                            <ul class="job-content">
+                                {% for requirement in job.job_requirements %}
+                                    <li>{{ requirement }}</li>
+                                {% endfor %}
+                            </ul>
+                            <!--Job Benefits-->
+                            <h5 class="job-extra-heading">Benefits:</h5>
+                            <ul class="job-content">
+                                {% for benefit in job.job_benefits %}
+                                    <li>{{ benefit }}</li>
+                                {% endfor %}
+                            </ul>
+                            <!--Job Posted By-->
+                            <h5 class="job-extra-heading">Posted By:</h5>
+                            <p class="posted-by">{{ job.posted_by|capitalize }}</p>                           
+                        </div>
                     </div>
-                </div>
-            {% endfor %}
+                {% endfor %}
+            {% else %}
+                <h3 class="results-heading">No Results Found</h3>
+            {% endif %}
         </div>
     </section>
 {% endblock %}

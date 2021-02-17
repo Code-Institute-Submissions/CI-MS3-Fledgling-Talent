@@ -204,7 +204,14 @@ body {
     font-size: 1.6rem;
     padding: 2rem;
 }
+.results-heading {
+    font-size: 2rem;
+    margin: 5rem auto;
+}
 /*--------------------------------------------Jobs*/
+.job-section {
+    min-height: 50vh;
+}
 .job-card {
     width: 100%;
     margin: 2rem auto 1rem;
@@ -358,7 +365,7 @@ footer {
 .search-container {
     width: 100%;
     background-color: #DDD;
-    margin: 5rem auto;
+    margin: 8rem auto 4rem;
     padding: 0.5rem;
     text-align: center;
     border: 0.2rem solid #000;

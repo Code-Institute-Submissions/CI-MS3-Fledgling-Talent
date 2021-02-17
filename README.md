@@ -219,6 +219,11 @@ MongoDB was used to host the database and the following schema was designed:
 
 
 
+* Under the role_type collection there are three strings all called role_type, however they all have different values which are Permanent, Temporary and Fixed Term Contract
+* This collection was added at a later date, as I wanted to be able to get the previously selected value from a form to show up automatically when editing the job
+
+
+
 #### 4. Skeleton
 
 * Wireframe was created using [Balsamiq](https://balsamiq.com/)
@@ -310,6 +315,8 @@ MongoDB was used to host the database and the following schema was designed:
 * The website was originally going to feature multiple sectors, however as someone who was seeking their first role in the tech sector, it felt right to change to something that would be more relatable
 * The search bar was moved to the top of the Find Jobs page, rather than over the home page image
 * The profile page was simplified as the original design contained a lot of information which felt unnecessary at the time
+* New collection called role_type was added to DB schema which features three strings (Permanent, Temporary and Fixed Term Contract)
+  * This was done in order to get the previously selected value from a form to show when editing a job
 
 
 
@@ -440,8 +447,6 @@ The W3C Markup Validator, W3C CSS Validator, JSHint and PEP8 Online services wer
 
 
 [W3C Markup Validator](https://validator.w3.org/) 
-
-![](static/testing-images/html-validator-whole-site.png)
 
 ![](static/testing-images/html-validator-index.png)
 

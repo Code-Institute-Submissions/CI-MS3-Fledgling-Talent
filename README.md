@@ -195,7 +195,7 @@ The site was designed to have essential pages which are Home, Find Jobs, Post Jo
 
 
 
-The same navigation bar and footer was used across all pages for consistency and better IXD.
+The same navigation bar and footer was used across all pages for consistency and better UX.
 
 
 
@@ -447,6 +447,10 @@ The W3C Markup Validator, W3C CSS Validator, JSHint and PEP8 Online services wer
 
 
 [W3C Markup Validator](https://validator.w3.org/) 
+
+* There are a number of errors and warning showing for various pages of the website, but these all relate to the use of the Jinja language, which the validator does not parse well. These can all safely be ignored
+
+  
 
 ![](static/testing-images/html-validator-index.png)
 
